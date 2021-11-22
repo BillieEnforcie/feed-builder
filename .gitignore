@@ -1,3 +1,6 @@
 Lib/*
 Scripts/*
 pyvenv.cfg
+build/*
+dist/*
+feed_builder.egg-info/*
