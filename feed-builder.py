@@ -62,8 +62,8 @@ def feed_builder(target_dir):
     stream = os.popen('git pull origin')
     output = stream.read();
 
-    #if not 'files changed' in output:
-    #    return
+    if not 'files changed' in output:
+        return
 
     filenames = [(root + sepr + file) for (root, dirs, files) in os.walk(target_dir) for file in files]
     filenames.sort(key=get_pub_date, reverse=True)
